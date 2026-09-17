@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff2c2"/><stop offset=".5" stop-color="#e2b04a"/><stop offset="1" stop-color="#8a5e18"/>
+    </linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9edf2"/><stop offset=".5" stop-color="#9aa4ad"/><stop offset="1" stop-color="#4b535a"/>
+    </linearGradient>
+  </defs>
+  <!-- blade -->
+  <path d="M3 3 L19 15 L15 19 Z" fill="url(#b)" stroke="#1a120a" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M3 3 L17 14" stroke="#fff" stroke-width="1" opacity=".7"/>
+  <!-- crossguard -->
+  <path d="M13 21 L21 13 L24 16 L16 24 Z" fill="url(#g)" stroke="#1a120a" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- grip -->
+  <path d="M19 21 L26 28" stroke="#3b2612" stroke-width="4" stroke-linecap="round"/>
+  <path d="M19 21 L26 28" stroke="#7a5314" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="27.5" cy="29" r="2.4" fill="url(#g)" stroke="#1a120a" stroke-width="1"/>
+</svg>
