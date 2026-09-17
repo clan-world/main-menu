@@ -26,9 +26,9 @@ Mouse, touch, Tab, Enter and Space work throughout. The main menu also supports 
 
 ## Console feel
 
-A single immersive scene replaces website navigation. Six extensible menu entries live in the `menu` array in `src/main.jsx`. Textured double-beveled buttons, brass edge ornaments, illustrated cursors, short synthesized selection tones, a floating sanctuary marker, portal light, rising embers and appearing/fading parchment whispers provide the game-menu treatment. Mobile brings the sanctuary above the full-size touch controls; desktop keeps the left stack and living right side.
+A single immersive scene replaces website navigation. Six extensible menu entries live in the `menu` array in `src/main.jsx`. Generated bronze plaques with painted idle/hover/pressed states, a gold Play now plaque, illustrated relic icons and cursors, short synthesized selection tones, a drifting sanctuary painting, rising crystal sparks and appearing/fading parchment whispers provide the game-menu treatment. Mobile brings the sanctuary above the full-size touch controls; desktop keeps the left stack and living right side.
 
-All runtime art and fonts are local. Sanctuary art is an optimized ~495 KB WebP, created with the built-in image-generation tool; the prompt is in `public/art/ART.md`. Cinzel and Crimson Text are bundled under their included SIL Open Font Licenses.
+All runtime art and fonts are local. The complete art pass uses original built-in image generation: parchment/runes, sanctuary, four plaque treatments, eight relic icons, and two alpha cursors (about 1.1 MiB total). Exact prompts, export details, and motion behavior are documented in [public/art/ART.md](public/art/ART.md). No Imagine/video tool was available; the living hero uses CSS animation of generated artwork. Cinzel and Crimson Text are bundled under their included SIL Open Font Licenses.
 
 ## Verify
 

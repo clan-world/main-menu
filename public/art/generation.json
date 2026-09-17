@@ -1,0 +1,34 @@
+{
+  "paper": {
+    "source": "exec-dfd30808-b739-4d89-8aa6-2eeb112fd902.png",
+    "prompt": "Use case: stylized-concept. Asset type: full bleed background parchment plate for Clan World fantasy game menu. Landscape 1536x1024. Invent an ancient warm ivory vellum manuscript, tactile handmade fibers, softly worn sepia edges, exquisitely hand inked small runic inscriptions and fragments of astronomical rings confined to the outermost edges. Large quiet pale center and left for UI readability. Muted moss, antique gold and walnut ink. Hand painted RPG illuminated atlas aesthetic, no recognizable words, no UI, no photographic stock texture, no watermark. Entire canvas is parchment, no outside background."
+  },
+  "hero": {
+    "source": "exec-95c259fb-f107-45ad-9a9e-f5cec048dfa7.png",
+    "prompt": "Use case: stylized-concept. Asset type: Clan World living right-side hero plate, landscape 1536x1024. Original handcrafted fantasy illuminated atlas painting: an ancient clan sanctuary on a floating rocky island, circular stone gateway with amber light at center, cypress trees, mossy steps, russet-roof towers, small red pennants, little warm lanterns, slender waterfalls fading into ink-wash mist. Island framed by incomplete hand-inked astronomical rings and subtle invented runes. Rich painterly gouache and meticulous pen hatching, moss green, bronze, warm ivory vellum. Center the island, occupy middle 80 percent, edges dissolve softly into pale parchment. Leave bottom 15 percent quiet pale parchment for live caption. No text, UI, watermark, stock imagery. Atmospheric narrative, premium fantasy strategy game."
+  },
+  "idle": {
+    "source": "exec-4de7eb47-9d11-4943-9d0b-fc6ec3c66304.png",
+    "prompt": "Use case: stylized-concept. Asset type: one blank idle button plaque for Clan World fantasy game, wide landscape 1536x1024 canvas. A single long horizontal rectangular plaque, aspect ratio 5:1, centered on plain ivory background. Straight-on orthographic. Dark moss-black hammered bronze inset face, engraved antique gold double rim, ornate restrained interlaced root motifs at both short ends, tiny rivets, hand-carved irregularities. Broad empty dark central area for HTML label, no icons or lettering. Plaque occupies full canvas width with 4 percent margin on each side; approximately 28 percent canvas height. Crisp silhouette, square beveled corners. Beautiful hand painted game inventory art, matte tactile finish. No shadow outside plaque, no UI mockup, no watermark."
+  },
+  "hover": {
+    "source": "exec-ae0bde00-20ee-4951-80fd-cc7bb73590ca.png",
+    "prompt": "Use case: precise-object-edit. This image is the edit target: Clan World idle menu plaque. Create its HOVER state. Preserve EXACT plaque silhouette, position, size, central empty face, interlaced branch carvings and plain ivory surrounding canvas. Change only illumination: antique gold rim and branch tips shine amber, tiny engraved grooves carry restrained golden light, central moss bronze face slightly lighter. No text or new objects. Same straight-on camera."
+  },
+  "pressed": {
+    "source": "exec-5fb69e67-18a5-433f-ab82-858818bed19a.png",
+    "prompt": "Use case: precise-object-edit. Input image is Clan World idle plaque edit target. Create its PRESSED state, preserve EXACT silhouette, placement, dimensions, root ornament design and ivory surrounding background. Change only material lighting: inset dark bronze face appears deeply recessed, upper inside bevel strongly shadowed, lower brass lip catches narrow warm reflected light, branches dark antique bronze. No text, symbols or new objects. Same straight-on view."
+  },
+  "primary": {
+    "source": "exec-c50d7ea8-0d9b-4623-a544-e5ca950fa26a.png",
+    "prompt": "Use case: precise-object-edit. Input image is Clan World idle plaque edit target. Create primary PLAY NOW button plaque, with NO lettering (live text added later). Preserve EXACT silhouette, position, size and interlaced root carvings and ivory surrounding canvas. Replace dark bronze center with radiant matte hammered antique gold, warm honey gold face with subtle artisan tool marks. Dark bronze root ornaments frame gold center; gold double bevel. Center must remain quiet and clear for dark text. Same straight-on view. No icons, text or new objects."
+  },
+  "icons": {
+    "source": "exec-cd8acf53-579b-4b96-b57a-c4cf6840d4c8.png",
+    "prompt": "Use case: stylized-concept. Asset type: Clan World game menu icon atlas. A precise 4 columns by 2 rows grid of EIGHT separate hand-painted inventory icons on genuinely TRANSPARENT background, square 1024x1024 canvas. Each icon centered in its own equal 256x512 cell with generous transparent spacing, no dividers, no labels. Reading order: 1 diagonal ancient steel sword with bronze root hilt; 2 open vellum rune codex; 3 antique gold sun medallion; 4 three stacked moss-green sealed collectible cards; 5 ornate bronze cog; 6 ivory gaming dice pair; 7 curled bronze signal horn; 8 amber crystal ember. Strong crisp silhouettes readable at 32px. Cohesive premium painterly RPG relic art, dark outlines, warm brass edges, ivory highlights, moss enamel, tactile carved details. No text, no shadows beyond objects, no UI, no watermark. Alpha transparency."
+  },
+  "cursors": {
+    "source": "exec-5a879628-3718-4175-9e40-2b8941b0facd.png",
+    "prompt": "Use case: stylized-concept. Asset type: custom cursor atlas for Clan World fantasy game. Two separate cursor designs side by side on genuinely TRANSPARENT 1024x1024 canvas, each centered within its own half. Left: classic mouse arrow pointer pointing upper left, ivory steel triangular blade with dark bronze outline and tiny root-engraved gold inset, sharp tip, strong simple readable silhouette. Right: pointing armored gauntlet hand, index finger pointing upper left, bronze plates and ivory fingertip, strong simple silhouette. Painted premium fantasy game art, dark edge contrast, no extra ornaments outside silhouette. Each occupies central 60 percent of its half, ample transparent margins. Designed to be legible when reduced to 32x32. No text, no labels, no watermark, real alpha background."
+  }
+}

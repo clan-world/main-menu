@@ -41,62 +41,9 @@ const menu = [
   },
 ];
 function Icon({ name, ...props }) {
-  const paths = {
-    sword: (
-      <>
-        <path d="m7 18 12-13 2-2-1 6L9 20M5 15l7 7M4 23l4-5M16 4l4 4" />
-      </>
-    ),
-    book: (
-      <>
-        <path d="M12 6C9 3 5 3 2 4v15c4-1 7 0 10 2 3-2 6-3 10-2V4c-3-1-7-1-10 2v15M5 8l4 1M15 9l4-1" />
-      </>
-    ),
-    sun: (
-      <>
-        <circle cx="12" cy="12" r="5" />
-        <path d="M12 0v4m0 16v4M0 12h4m16 0h4M3 3l3 3m12 12 3 3M3 21l3-3M18 6l3-3" />
-      </>
-    ),
-    cards: (
-      <>
-        <path d="m8 2 13 3-4 17L4 19ZM4 5 1 7l2 14 10 2" />
-        <path d="m13 7 2 5-4 4-2-5Z" />
-      </>
-    ),
-    gear: (
-      <>
-        <path d="m9 2 6 0 1 4 4 1 2 5-3 3v4l-5 3-3-3-4 1-4-5 2-3-1-4 5-2Z" />
-        <circle cx="12" cy="12" r="3" />
-      </>
-    ),
-    dice: (
-      <>
-        <rect x="3" y="3" width="18" height="18" rx="3" />
-        <path d="M7 7h.1M17 7h.1M12 12h.1M7 17h.1M17 17h.1" strokeWidth="3" />
-      </>
-    ),
-    sound: (
-      <>
-        <path d="M3 9h4l5-5v16l-5-5H3ZM16 8q5 4 0 8m3-11q8 7 0 14" />
-      </>
-    ),
-  };
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.3"
-      strokeLinejoin="round"
-      strokeLinecap="round"
-      aria-hidden="true"
-      {...props}
-    >
-      {paths[name] || paths.sun}
-    </svg>
-  );
+  return <img className="art-icon" src={`/art/icon-${name}.webp`} alt="" aria-hidden="true" draggable="false" {...props} />;
 }
+
 function App() {
   const [panel, setPanel] = useState(null),
     [sound, setSound] = useState(
@@ -191,8 +138,7 @@ function App() {
   }
   return (
     <div className={`console ${motion ? "" : "still"}`}>
-      <div className="world-art" />
-      <div className="vignette" />
+      <div className="world-art" aria-hidden="true" />
       <div className="screen-frame" aria-hidden="true">
         <i />
         <i />
@@ -201,11 +147,11 @@ function App() {
       </div>
       <header>
         <div className="edition">
-          <span className="tiny-sigil">✧</span> THE FIRST AGE{" "}
+          <Icon name="sun" /> THE FIRST AGE{" "}
           <span className="header-line" />
         </div>
         <button className="profile" onClick={() => open("guide")}>
-          <span className="avatar">W</span>
+          <span className="avatar"><Icon name="sun" /></span>
           <span>
             Wanderer<small>YOUR LEGEND AWAITS</small>
           </span>
@@ -216,7 +162,7 @@ function App() {
         <section className="menu-zone" aria-label="Main menu">
           <div className="brand">
             <div className="brand-ornament">
-              <span />✦<span />
+              <span /><Icon name="sun" /><span />
             </div>
             <h1>
               CLAN<span>WORLD</span>
@@ -245,8 +191,6 @@ function App() {
                   <small>{m.sub}</small>
                 </span>
                 <span className="button-end">{i === 0 ? "➜" : "›"}</span>
-                <span className="corner c1" />
-                <span className="corner c2" />
               </button>
             ))}
           </nav>
@@ -258,10 +202,7 @@ function App() {
           <div className="realm-tag">
             <span className="live-dot" /> THE WORLD IS STIRRING
           </div>
-          <div className="portal-glow" aria-hidden="true" />
-          <div className="rune-orbit" aria-hidden="true">
-            ᚠ · ᚢ · ᚦ · ᚨ · ᚱ · ᚲ · ᚷ · ᚹ
-          </div>
+          <div className="hero-plate" aria-hidden="true" />
           <div className="embers" aria-hidden="true">
             {Array.from({ length: 18 }, (_, i) => (
               <i
@@ -279,7 +220,7 @@ function App() {
             onClick={() => open("play")}
             aria-label="Explore the sanctuary"
           >
-            <span>✧</span>
+            <span><Icon name="sun" /></span>
             <small>ENTER THE SANCTUARY</small>
           </button>
           <div className="world-caption">
@@ -337,7 +278,7 @@ function App() {
           >
             ×
           </button>
-          <div className="panel-sigil">✦</div>
+          <div className="panel-sigil"><Icon name="sun" /></div>
           <p className="eyebrow">THE CHRONICLES OF CLAN WORLD</p>
           <h2 id="panel-title">{menu.find((m) => m.id === panel)?.title}</h2>
           <div className="divider">◆</div>
@@ -492,7 +433,7 @@ function App() {
               <label className="setting">
                 <span>
                   <b>Living parchment</b>
-                  <small>Embers, drifting light and ink whispers</small>
+                  <small>Drifting sanctuary, relic sparks and ink whispers</small>
                 </span>
                 <input
                   type="checkbox"
