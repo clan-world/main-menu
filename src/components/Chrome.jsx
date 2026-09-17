@@ -4,10 +4,7 @@ export function TopBar({ sound, onToggleSound, onFullscreen }) {
   return (
     <header className="topbar">
       <div className="crest" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="34" height="34">
-          <path d="M16 3 L28 8 V17 C28 24 22 28 16 30 C10 28 4 24 4 17 V8 Z" fill="#1a120a" stroke="#e2b04a" strokeWidth="2" />
-          <path d="M16 8 V25 M10 13 L22 19 M22 13 L10 19" stroke="#f5d98a" strokeWidth="2" strokeLinecap="round" />
-        </svg>
+        <img src="/art/crest.webp" alt="" draggable={false} />
       </div>
       <div className="wordmark">
         <span className="wm-main">Clan World</span>

@@ -1,0 +1,47 @@
+{
+  "parchment": {
+    "size": "landscape",
+    "transparent": false,
+    "prompt": "Full-bleed painted texture plate for a dark-fantasy game main menu background: an ancient sheet of vellum parchment filling the entire frame edge to edge, seen straight on. Warm ochre and tan with darker burnt-umber scorched edges and corners, visible fibre grain, soft creases, a few faint sepia water rings and ink blots. Scattered sparsely across it, faded hand-inked Elder-Futhark-style runes in dark sepia at very low opacity, as if written centuries ago and worn away. Slightly brighter, cleaner area centre-right where a picture frame will sit. Painterly, high detail, evenly lit, no letters or words, no borders, no logos, no objects."
+  },
+  "wood": {
+    "size": "square",
+    "transparent": false,
+    "prompt": "Seamless tileable texture of very dark aged oak wood planks with fine straight grain, stained almost black-brown with warm mahogany highlights, faint scratches and a subtle oiled sheen, used as the chrome bars of a medieval game console UI. Evenly lit, no seams, no nails, no text, no borders, tileable."
+  },
+  "plaque_idle": {
+    "size": "landscape",
+    "transparent": true,
+    "prompt": "Isolated game-UI menu button plaque on a fully transparent background, centred, filling the frame width: a long horizontal rectangular plate of dark stained oak wood and worn black leather, framed by a hand-forged bronze border with hammered texture, four riveted bronze corner brackets with small scroll flourishes, a thin inner gold hairline inset from the border, and a slight dark inner shadow along the bottom edge. Aspect about 6:1 wide. Dark fantasy Viking-Celtic style, painterly but crisp edges, front view, no perspective, no text, no icons, no glow, the centre area plain and empty for a label."
+  },
+  "plaque_primary": {
+    "size": "landscape",
+    "transparent": true,
+    "prompt": "Isolated game-UI primary call-to-action button plaque on a fully transparent background, centred, filling the frame width: a long horizontal rectangular plate of deep crimson red tooled leather with subtle diamond stitching, framed by a rich hand-forged polished gold border with hammered texture, four ornate gold corner brackets with Celtic knot flourishes and rivets, a thin inner brighter gold hairline, subtle warm light catching the top edge. Aspect about 6:1 wide. Dark fantasy Viking-Celtic style, painterly but crisp edges, front view, no perspective, no text, no icons, the centre area plain and empty for a label."
+  },
+  "icons": {
+    "size": "landscape",
+    "transparent": true,
+    "prompt": "Sprite sheet of six game menu icons arranged in an exact 3 columns by 2 rows grid with equal spacing on a fully transparent background, each icon the same size and centred in its cell. All icons in the same style: embossed antique gold metal with bronze shadows and a subtle dark outline, dark fantasy Viking-Celtic game UI, front view, no cell borders, no text. Row 1: (1) a crossed pair of longswords, (2) an unrolled parchment scroll with a wax seal, (3) a radiant sun disc with a shield in the centre. Row 2: (4) a fanned hand of three ornate playing cards with a torn wax seal, (5) an iron cog gear, (6) a pair of carved bone dice showing pips."
+  },
+  "cursors": {
+    "size": "square",
+    "transparent": true,
+    "prompt": "Sprite sheet of four game cursor icons arranged in an exact 2 by 2 grid on a fully transparent background, each large and centred in its cell, same style: dark fantasy Viking-Celtic game UI, black iron with polished gold edges and a subtle bronze bevel, crisp readable silhouettes. Top-left: a classic pointer arrow shaped like a dagger blade, tip at the upper-left, pointing up-left. Top-right: a small ornate short sword pointing up-left, gold crossguard, the tip at the upper-left. Bottom-left: an armoured gauntlet open hand, palm out. Bottom-right: an armoured gauntlet closed fist gripping. No text, no cell borders, no shadows on the background."
+  },
+  "hero": {
+    "size": "landscape",
+    "transparent": false,
+    "prompt": "Painterly dark-fantasy game key art, wide 3:2 landscape: a clan war camp at night on a high moor. In the left third a tall crimson clan banner with a gold border and a black shield emblem showing a gold tower and three stars hangs from a wooden pole and stirs in the wind. Bottom right a campfire burns with warm orange light and drifting embers, lighting the ground and the faces of three armoured warriors sitting and standing around it seen from behind, small in frame. Behind them layered misty mountain ridges recede into a deep blue night sky with a large pale moon top right and scattered stars, thin fog banks on the moor. Moody, cinematic, rich detail, oil-painting texture, no text, no letters, no logos, no UI."
+  },
+  "crest": {
+    "size": "square",
+    "transparent": true,
+    "prompt": "Isolated game emblem on a fully transparent background, centred: a round bronze medallion with a hammered rim and a ring of tiny engraved runes, containing a black heraldic shield bearing a gold tower and three small gold stars, dark fantasy Viking-Celtic game UI, embossed antique gold and bronze, crisp, front view, no text."
+  },
+  "medallion_play": {
+    "size": "square",
+    "transparent": true,
+    "prompt": "Isolated round game play button on a fully transparent background, centred: a thick polished gold medallion with a hammered bronze outer ring engraved with tiny runes, a dark glossy obsidian centre, and a large bright gold triangular play arrow pointing right embossed in the middle. Dark fantasy Viking-Celtic game UI, crisp, front view, no text."
+  }
+}

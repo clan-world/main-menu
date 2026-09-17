@@ -13,38 +13,36 @@ Goal: the browser should feel like a game hub you booted into, not a page you lo
 
 ## Buttons that are not divs
 
-Each button is a stack of layers, all in `src/components/MenuButton.jsx` + `styles.css`:
+Each button is a generated plaque, not CSS chrome (`src/components/MenuButton.jsx` + `styles.css`, prompts in `ART.md`):
 
-- Dark wood base texture plus a grit overlay and a diagonal leather sheen.
-- Bronze double frame (border plus inset gold hairline plus a deep inner shadow at the bottom edge) and four SVG corner flourishes with rivets.
-- A round bronze medallion for the icon with a slowly rotating dashed ring. The ring spins faster and turns gold on selection.
-- Cinzel uppercase label, IM Fell italic subtitle, optional pulsing `LIVE` badge, and a chevron that slides right on selection.
-- Selection state: gold rim glow, a light sweep across the face, slight scale and translate. Press state compresses the frame.
-- **Play now** is a crimson leather variant with a solid-gold medallion, larger size and a breathing glow so the CTA always has the most weight.
+- Three generated skins per button (idle, hover, pressed) painted as one image and edited into states so the geometry matches; they are stacked and crossfaded with opacity.
+- Applied with CSS `border-image`, so the forged corner brackets keep their shape while the rails and leather stretch to any width. `--bh` (plaque height) drives the slice widths.
+- A generated embossed-gold icon per entry (crossed swords, scroll, sun-shield, cards, cog, dice) with a slowly rotating dashed ring that turns gold on selection.
+- Cinzel uppercase label, IM Fell italic subtitle, a `LIVE` wax-seal badge pinned to the top rail, and a chevron that slides right on selection.
+- Selection: hover skin fades in, warm drop-shadow glow, a light sweep across the face, slight scale and translate. Press swaps to the pressed skin.
+- **Play now** is the crimson-leather, gold-knotwork plaque, larger, with a breathing glow so the CTA always has the most weight.
 - Sizes are `clamp()`-ed against viewport height so the six-row stack always fits above the hint bar on short laptop screens.
 
 ## Custom cursors
 
-Three hand-drawn SVG cursors in `public/cursors/`: a dark, gold-edged blade arrow for the default, a small sword for anything clickable, and a ring reticle spare. They are applied via CSS with correct hotspots and fall back to the native cursors if SVG cursors are unsupported.
+Four generated iron-and-gold cursors in `public/art/cursors/`: a dagger-blade arrow for the default, an ornate short sword for anything clickable, and open / closed gauntlets over the menu column. 36 px with 72 px retina variants via `image-set()`, hotspots at the blade tips, native cursors as fallback.
 
 ## Living right side
 
-`src/scene/HeroScene.jsx` is a canvas painting with no image assets:
+A generated key-art painting (night war camp: clan banner, campfire, warriors, moonlit mountains) under a live canvas layer, `src/scene/HeroScene.jsx`:
 
-- Night sky gradient, ninety twinkling stars, a cratered moon with halo.
-- Three mountain ridges built from summed sines so they wrap seamlessly, drifting at different speeds for parallax.
-- A campfire at the bottom right: flickering radial glow driven by layered sines, seven animated flame tongues, and forty-six embers that rise, sway and fade.
-- Drifting fog bands and a foreground ground silhouette.
-- A **waving clan banner**: the cloth (crimson, gold border, rune ring, shield with tower and stars, "CLAN WORLD" ribbon) is painted once to an offscreen canvas, then drawn in 3px vertical strips with a travelling sine offset and per-strip light/shade so it reads as cloth in wind.
-- DOM plates on top: season title, a rotating live counter (warriors awake / clans mustered / packs ripped), a ticking campaign countdown, and a caption that changes with the selected menu item. A pulsing play medallion sits in the middle of the scene.
+- The painting drifts on a slow 46 s push-in so it never reads as a still.
+- The canvas is mapped to the painting's `object-fit: cover` geometry so effects land on the right pixels: the campfire breathes (additive flicker), embers rise from it, fog rolls across the moor, stars twinkle, the moon halo pulses, and a band of light travels across the banner cloth.
+- DOM plates on top: season title, a rotating live counter, a ticking campaign countdown, a caption that changes with the selected menu item, and the generated gold play medallion with a ripple.
+- A Grok Imagine video loop of the same painting was attempted and is blocked by the account's zero-data-retention setting; the prompt is kept in `ART.md`.
 
 The scene pauses while a panel is open and honours reduced motion (also a toggle in Settings).
 
 ## Parchment and runes
 
-- `tools/make_textures.py` bakes the parchment (fractal noise tone map, fibre streaks, creases, stains, burnt vignette), a tileable dark wood, and a transparent grit tile with Pillow, so the art is reproducible and stays small.
-- `src/components/RuneField.jsx` inks a sparse field of Elder-Futhark-style glyphs (defined as line segments in `src/lib/runes.js`, no rune font needed) across the parchment at 5–12% opacity. Every second or two one rune catches candlelight: a gold glow that swells and fades.
-- A moving grain layer in multiply blend gives the paper a faint film-like shimmer.
+- The background is a generated vellum plate with scorched edges, stains and faded inked runes (`public/art/parchment.jpg`, prompt in `ART.md`). Chrome bars use a generated dark-oak plank texture made seamless by mirror-tiling.
+- `src/components/RuneField.jsx` inks a second, sparser layer of Elder-Futhark-style glyphs (line segments in `src/lib/runes.js`) on top so individual runes can catch candlelight: a gold glow that swells and fades every second or two.
+- The moving grain layer is a high-pass of the generated parchment itself (`fibre.png`), so the shimmer is the paper's own fibre.
 
 ## Whisper text
 
@@ -61,5 +59,5 @@ Under 880px the hero moves above the stack as a shorter framed window, the six r
 ## Not done / next
 
 - Placeholder panels only; real routes would replace `Panel` content.
-- A short pixel-art or painted character on the right would push closer to Cambria's hero. The canvas scene is built to accept another layer.
+- A real video loop of the hero once Grok Imagine is allowed on this account; `HeroPanel` only needs a `<video>` in place of the `<img>`.
 - Haptics on gamepad, and an idle "attract" mode after inactivity.

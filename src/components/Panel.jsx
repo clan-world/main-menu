@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Corners, Rule } from './Ornament.jsx'
-import { Icon } from './icons.jsx'
+import { ArtIcon } from './ArtIcon.jsx'
 
 /**
  * Placeholder panel for each menu item, presented as an unrolling scroll.
@@ -20,7 +20,7 @@ export function Panel({ item, onClose, children }) {
           <Corners />
           <div className="panel-head">
             <span className="panel-icon">
-              <Icon name={item.icon} />
+              <ArtIcon name={item.icon} />
             </span>
             <h2 id="panel-title">{item.label}</h2>
             <Rule />

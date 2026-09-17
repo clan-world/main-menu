@@ -22,7 +22,7 @@ Shared brief: [`BRIEF.md`](BRIEF.md). Cambria visual refs: [`refs/cambria/`](ref
 
 ## This branch: `prototype/fable-5-1`
 
-Vite + React single-page app. No runtime dependencies beyond React; every texture, cursor and sound is generated in-repo.
+Vite + React single-page app. No runtime dependencies beyond React. Every texture, plaque, icon, cursor and the hero painting is invented with image generation (prompts and pipeline in [`ART.md`](ART.md)); sound is synthesised.
 
 ### Run
 
@@ -55,8 +55,16 @@ Append an entry to `MENU` in [`src/menu.js`](src/menu.js). Icons live in [`src/c
 
 See [`NOTES.md`](NOTES.md).
 
-### Regenerating textures
+### Art
+
+All visuals are generated, not stock. See [`ART.md`](ART.md) for every prompt, the Codex `image_gen` /
+Grok Imagine pipeline, and how to regenerate:
 
 ```bash
-python3 tools/make_textures.py   # needs Pillow; writes public/tex/*
+python3 tools/gen_art.py                              # raw art via the Codex CLI → /tmp/cw-art/raw
+RAW=/tmp/cw-art/raw python3 tools/build_assets.py     # crop / slice / optimise → public/art
 ```
+
+### Screenshot / dev flags
+
+`?boot=1` skips the splash, `?sel=N` preselects a row, `?open=<id>` opens a panel (useful for headless captures).

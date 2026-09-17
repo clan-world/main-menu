@@ -12,7 +12,7 @@ function pad(n) {
   return String(n).padStart(2, '0')
 }
 
-/** The "living" right side: canvas painting + a few animated status plates. */
+/** The "living" right side: generated key art under an animated canvas layer, plus status plates. */
 export function HeroPanel({ reduced, paused, item, onPlay }) {
   const [left, setLeft] = useState(2 * 3600 + 14 * 60 + 9)
   const [tick, setTick] = useState(0)
@@ -32,7 +32,10 @@ export function HeroPanel({ reduced, paused, item, onPlay }) {
     <section className="hero" aria-label="The realm">
       <div className="hero-frame">
         <Corners />
-        <HeroScene reduced={reduced} paused={paused} />
+        <div className="hero-media" aria-hidden="true">
+          <img className="hero-art" src="/art/hero.jpg" alt="" draggable={false} fetchPriority="high" />
+          <HeroScene reduced={reduced} paused={paused} />
+        </div>
         <div className="hero-overlay">
           <div className="plate plate-top">
             <span className="plate-kicker">Season III</span>
@@ -57,11 +60,7 @@ export function HeroPanel({ reduced, paused, item, onPlay }) {
             <span className="caption-blurb">{item?.blurb}</span>
           </div>
           <button type="button" className="hero-play" onClick={onPlay} aria-label="Play now">
-            <svg viewBox="0 0 64 64" width="64" height="64" aria-hidden="true">
-              <circle cx="32" cy="32" r="29" fill="rgba(20,12,6,.55)" stroke="#e2b04a" strokeWidth="3" />
-              <circle cx="32" cy="32" r="24" fill="none" stroke="#f5d98a" strokeWidth="1" opacity=".7" />
-              <path d="M26 20 L44 32 L26 44 Z" fill="#f5d98a" />
-            </svg>
+            <img src="/art/medallion-play.webp" alt="" draggable={false} />
           </button>
         </div>
       </div>

@@ -11,13 +11,15 @@ import { useGamepad } from './lib/useGamepad.js'
 import { sfx, unlock, setEnabled, startAmbient, stopAmbient } from './lib/sound.js'
 
 const prefersReduced = () => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+// Dev/screenshot affordances: ?boot=1 skips the splash, ?sel=N preselects a row, ?open=<id> opens a panel.
+const QS = new URLSearchParams(window.location.search)
 
 export default function App() {
-  const [booted, setBooted] = useState(false)
+  const [booted, setBooted] = useState(QS.has('boot'))
   const [leaving, setLeaving] = useState(false)
-  const [selected, setSelected] = useState(0)
+  const [selected, setSelected] = useState(Math.min(MENU.length - 1, Number(QS.get('sel')) || 0))
   const [inputMode, setInputMode] = useState('pointer')
-  const [open, setOpen] = useState(null) // menu item shown in a panel
+  const [open, setOpen] = useState(() => MENU.find((m) => m.id === QS.get('open')) || null) // menu item shown in a panel
   const [launching, setLaunching] = useState(false)
   const [sound, setSound] = useState(true)
   const [reduced, setReduced] = useState(prefersReduced())

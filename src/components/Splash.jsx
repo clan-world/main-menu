@@ -21,6 +21,7 @@ export function Splash({ onEnter, leaving }) {
           ))}
         </svg>
       </div>
+      <img className="splash-crest" src="/art/crest.webp" alt="" draggable={false} />
       <h1 className="logo">
         <span className="logo-line">Clan</span>
         <span className="logo-line">World</span>
