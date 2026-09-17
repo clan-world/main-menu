@@ -20,7 +20,7 @@ Shared brief: [`BRIEF.md`](BRIEF.md). Cambria visual refs: [`refs/cambria/`](ref
 
 ## This branch (`prototype/grok-4-6`)
 
-Vite + React hub. Generated parchment, ornamented plaques, camp scene, icons, and pixel cursors live in `public/art/` and `public/cursors/`.
+Vite + React hub. Imagine-invented parchment, rune veil, ornamented plaques (idle/hover/pressed + primary), camp scene with a looping hearth clip, icons, and pixel cursors live in `public/art/` and `public/cursors/`. Prompts: [`ART.md`](ART.md).
 
 ### Run
 

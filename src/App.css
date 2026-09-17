@@ -12,21 +12,22 @@
 .parchment,
 .parchment-runes {
   position: absolute;
-  inset: -8%;
+  inset: -10%;
   z-index: -2;
   background-image: url("/art/parchment.jpg");
-  background-size: 520px;
-  filter: saturate(0.85) brightness(0.42);
-  animation: parchment-drift 90s linear infinite;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.92) brightness(0.55) contrast(1.05);
+  animation: parchment-breathe 36s ease-in-out infinite alternate;
 }
 .parchment-runes {
   z-index: -1;
-  opacity: 0.35;
+  opacity: 0.4;
   mix-blend-mode: overlay;
-  background-size: 760px;
-  animation-duration: 140s;
+  background-image: url("/art/runes.jpg");
+  animation-duration: 52s;
   animation-direction: reverse;
-  filter: brightness(0.7) contrast(1.15);
+  filter: brightness(0.85) contrast(1.2);
 }
 .hub::after {
   content: "";
@@ -40,9 +41,9 @@
     linear-gradient(90deg, #0c0908cc 0 340px, transparent 52%);
 }
 
-@keyframes parchment-drift {
-  from { background-position: 0 0; }
-  to { background-position: 520px 260px; }
+@keyframes parchment-breathe {
+  from { transform: scale(1.02) translate(0, 0); }
+  to { transform: scale(1.1) translate(-1.6%, 1.2%); }
 }
 
 .rail {
@@ -127,6 +128,9 @@
 .menu-btn.is-primary .menu-btn-plate.hover {
   background-image: url("/art/btn-primary-hover.png");
 }
+.menu-btn.is-primary .menu-btn-plate.pressed {
+  background-image: url("/art/btn-primary-pressed.png");
+}
 .menu-btn.is-primary {
   color: #2a1a0c;
   text-shadow: 0 1px 0 #f7e7b8;
@@ -147,7 +151,7 @@
   width: 46px;
   height: 46px;
   object-fit: contain;
-  image-rendering: pixelated;
+  image-rendering: auto;
   filter: drop-shadow(0 2px 0 #0008);
   z-index: 1;
 }
@@ -250,6 +254,13 @@
   transform: scale(1.08);
   animation: ken 42s ease-in-out infinite alternate;
 }
+video.stage-hero {
+  pointer-events: none;
+}
+.stage-hero-clip {
+  position: absolute;
+  inset: 0;
+}
 .stage-world.is-still .stage-hero {
   animation: none;
 }
@@ -279,8 +290,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, #120c0888 0 18%, transparent 40%, #0a0706ee 100%),
-    linear-gradient(90deg, #120c0866, transparent 24%);
+    linear-gradient(180deg, #120c0866 0 12%, transparent 38%, #0a0706cc 100%),
+    linear-gradient(90deg, #120c0855, transparent 28%);
   pointer-events: none;
 }
 .embers {
@@ -294,7 +305,7 @@
   position: absolute;
   inset: -10px;
   border: 52px solid transparent;
-  border-image: url("/art/frame.png") 18% fill;
+  border-image: url("/art/frame.png") 18%;
   pointer-events: none;
   z-index: 2;
 }
@@ -353,8 +364,15 @@
 .cta-plate {
   position: absolute;
   inset: -18% -6%;
-  background: url("/art/btn-primary-hover.png") center / 100% 100% no-repeat;
+  background: url("/art/btn-primary.png") center / 100% 100% no-repeat;
   pointer-events: none;
+}
+.cta:hover .cta-plate,
+.cta:focus-visible .cta-plate {
+  background-image: url("/art/btn-primary-hover.png");
+}
+.cta:active .cta-plate {
+  background-image: url("/art/btn-primary-pressed.png");
 }
 .cta-label {
   position: relative;
@@ -484,8 +502,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   z-index: 50;
   pointer-events: none;
   will-change: transform;
@@ -498,14 +516,14 @@
 .game-cursor-sprite {
   position: relative;
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   transform-origin: 4px 2px;
 }
 .game-cursor img {
   position: absolute;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   image-rendering: pixelated;
   filter: drop-shadow(0 2px 0 #000a);
 }
@@ -543,11 +561,11 @@
   }
   .hub {
     grid-template-columns: 1fr;
-    grid-template-rows: auto minmax(200px, 32vh) auto auto;
+    grid-template-rows: auto minmax(180px, 28vh) minmax(0, 1fr) auto;
     height: 100dvh;
     padding: 10px 10px calc(12px + env(safe-area-inset-bottom));
     gap: 8px;
-    overflow: auto;
+    overflow: hidden;
   }
   .rail {
     display: contents;
@@ -563,6 +581,8 @@
   }
   .menu {
     grid-row: 3;
+    min-height: 0;
+    overflow: auto;
     padding-bottom: 8px;
   }
   .dock {

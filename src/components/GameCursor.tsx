@@ -57,8 +57,8 @@ export default function GameCursor({ enabled }: Props) {
   return (
     <div ref={ref} className="game-cursor" data-mode="arrow" aria-hidden="true">
       <span className="game-cursor-sprite">
-        <img className="game-cursor-arrow" src="/cursors/arrow.svg" alt="" />
-        <img className="game-cursor-pointer" src="/cursors/pointer.svg" alt="" />
+        <img className="game-cursor-arrow" src="/cursors/arrow.png" alt="" />
+        <img className="game-cursor-pointer" src="/cursors/pointer.png" alt="" />
       </span>
     </div>
   );

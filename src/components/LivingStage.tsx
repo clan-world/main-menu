@@ -33,6 +33,19 @@ export default function LivingStage({
     <section className={`stage ${entering ? "is-entering" : ""}`} aria-live="polite">
       <div className={`stage-world ${reduced ? "is-still" : ""}`}>
         <img className="stage-hero" src="/art/hero-camp.jpg" alt="" />
+        {reduced ? null : (
+          <video
+            className="stage-hero stage-hero-clip"
+            poster="/art/hero-camp.jpg"
+            autoPlay
+            loop
+            muted
+            playsInline
+            aria-hidden="true"
+          >
+            <source src="/art/hero-camp.mp4" type="video/mp4" />
+          </video>
+        )}
         <div className="stage-fire" aria-hidden="true" />
         <div className="stage-vignette" aria-hidden="true" />
         <Embers reduced={reduced} />
