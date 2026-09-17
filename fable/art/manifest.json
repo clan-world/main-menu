@@ -1,0 +1,102 @@
+{
+ "parchment": [
+  1600,
+  900
+ ],
+ "fibre": [
+  256,
+  256
+ ],
+ "wood": [
+  768,
+  768
+ ],
+ "hero": [
+  1536,
+  1024
+ ],
+ "plaque-idle": [
+  1200,
+  257
+ ],
+ "plaque-hover": [
+  1200,
+  257
+ ],
+ "plaque-pressed": [
+  1200,
+  257
+ ],
+ "plaque-primary": [
+  1200,
+  210
+ ],
+ "plaque-primary-hover": [
+  1200,
+  210
+ ],
+ "icons/sword": [
+  144,
+  144
+ ],
+ "icons/scroll": [
+  144,
+  144
+ ],
+ "icons/sun": [
+  144,
+  144
+ ],
+ "icons/cards": [
+  144,
+  144
+ ],
+ "icons/cog": [
+  144,
+  144
+ ],
+ "icons/dice": [
+  144,
+  144
+ ],
+ "cursors/arrow": [
+  36,
+  36
+ ],
+ "cursors/arrow@2x": [
+  72,
+  72
+ ],
+ "cursors/pointer": [
+  36,
+  36
+ ],
+ "cursors/pointer@2x": [
+  72,
+  72
+ ],
+ "cursors/grab": [
+  36,
+  36
+ ],
+ "cursors/grab@2x": [
+  72,
+  72
+ ],
+ "cursors/grabbing": [
+  36,
+  36
+ ],
+ "cursors/grabbing@2x": [
+  72,
+  72
+ ],
+ "crest": [
+  256,
+  256
+ ],
+ "medallion-play": [
+  256,
+  256
+ ]
+}
