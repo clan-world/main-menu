@@ -41,3 +41,10 @@ Buttons can be non-functional stubs / routes that show a placeholder panel — t
 - Working prototype on this branch only (do not rewrite other branches).
 - README section: how to run + what you tried for console feel.
 - Keep art assets in-repo (generated textures OK). Optimize for snappy load.
+
+## Cambria.gg notes (from screenshots in refs/cambria/)
+
+- Dark console-launcher hub: left nav cards with icons + subtitles, big right/center hero with pixel art + play affordance.
+- Buttons feel like **cards**, not web links — weight, icon, caption.
+- High-contrast accents (gold / red) on charcoal; immersive, not corporate.
+- Clan World twist you must invent: parchment/runes ancient-paper background, whisper text that writes then fades, Clan World menu labels below — do **not** copy Cambria’s crypto/token chrome.
