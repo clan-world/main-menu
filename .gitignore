@@ -1,0 +1,11 @@
+node_modules
+dist
+art/logs
+art/logs-test.txt
+shots/*.png
+art/raw/
+art/logs/
+art/*.log
+dist/
+node_modules/
+tsconfig.tsbuildinfo
