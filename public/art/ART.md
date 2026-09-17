@@ -1,0 +1,7 @@
+# Sanctuary artwork
+
+Generated using the built-in image-generation tool. Final runtime asset: `public/art/sanctuary.webp` (1536 × 1024, WebP quality 86). SVG grain, icons and cursors are authored in code. The source PNG remains in the tool's generated-images directory; only the optimized asset ships.
+
+## Final prompt
+
+Use case: stylized-concept. Asset type: background artwork for a fantasy console game main menu. A beautifully detailed ancient illuminated parchment atlas, wide landscape 1536x1024. Left 40 percent mostly empty warm ivory weathered paper with faint cartographic lines and runic handwritten notes, no legible text. Right 60 percent an exquisite isometric miniature fantasy clan sanctuary on a floating rocky island: circular ruined stone portal glowing warm amber at the center, tall dark cypress trees, small medieval stone towers with russet red roofs, mossy steps, tiny warm lanterns, waterfalls spilling off cliff into wispy ink clouds. A red pennant on the highest tower. Antique etching mixed with richly painted tabletop RPG concept art, meticulous pen hatching, warm sepia shadows, sage green foliage and copper highlights. Island sits within a faint circular astronomical diagram drawn on parchment. Cohesive full bleed parchment backdrop, restrained dark ink vignette at extreme edges. No UI, no lettering, no logos, no frame. Rich physical textures, handcrafted premium fantasy game aesthetic.

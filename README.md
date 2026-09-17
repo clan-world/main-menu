@@ -1,19 +1,43 @@
-# Clan World — Main Menu prototypes
+# Clan World · The First Age
 
-Console-feel main menu bake-off. Not a website. Immersive hub for Play Now / How to play / campaigns / packs / settings / mini-games.
+A standalone, playable main-menu prototype built with React and Vite. Ancient parchment, engraved brass and dark stone frame a living clan sanctuary.
 
-## Branches
+## Run
 
-| Branch | Model | Tool |
-| --- | --- | --- |
-| `prototype/astra-gpt6` | GPT-6 Astra | Codex CLI |
-| `prototype/fable-5-1` | Fable 5.1 | Claude Code CLI |
-| `prototype/grok-4-6` | Grok 4.6 | Grok Build CLI |
+Requires Node.js 20.19+ or 22.12+.
 
-Shared brief: [`BRIEF.md`](BRIEF.md). Cambria visual refs: [`refs/cambria/`](refs/cambria/).
+```sh
+npm install
+npm run dev
+```
 
-## Criteria
+Open the local URL printed by Vite. `npm run build` creates `dist/`; `npm run preview` serves that build. Dependencies are locked with npm.
 
-- Feels like a **console game** main menu in the browser (Cambria.gg direction + Clan World parchment/runes).
-- Avoid “divs with basic styling.” Textured, ornamented buttons. Custom cursors. Immersive chrome.
-- Mobile + desktop.
+## Explore
+
+- **Play now:** awaken three ancestral runes to open the sanctuary.
+- **How to play:** an introduction to the prototype.
+- **Gold Believers Campaign:** browse three founding-story chapters.
+- **Pack ripping:** break a free preview pack's seal to reveal the Dawnkeeper.
+- **Settings:** sound and motion preferences persist on this device.
+- **Mini games:** repeat the inscription to solve the rune trial; wrong choices reset the trial.
+
+Mouse, touch, Tab, Enter and Space work throughout. The main menu also supports Up/Down and Home/End. Escape closes a panel and restores focus. Dialogs contain keyboard focus. Sound starts disabled; reduced-motion preferences are honored. No accounts, payments, crypto or wallet connections. The campaign and pack contents are fixed demo content, not a live game service.
+
+## Console feel
+
+A single immersive scene replaces website navigation. Six extensible menu entries live in the `menu` array in `src/main.jsx`. Textured double-beveled buttons, brass edge ornaments, illustrated cursors, short synthesized selection tones, a floating sanctuary marker, portal light, rising embers and appearing/fading parchment whispers provide the game-menu treatment. Mobile brings the sanctuary above the full-size touch controls; desktop keeps the left stack and living right side.
+
+All runtime art and fonts are local. Sanctuary art is an optimized ~495 KB WebP, created with the built-in image-generation tool; the prompt is in `public/art/ART.md`. Cinzel and Crimson Text are bundled under their included SIL Open Font Licenses.
+
+## Verify
+
+```sh
+npx playwright install chromium
+npm test
+npm run build
+```
+
+Playwright checks desktop (1440×900) and mobile (390×844): button order, horizontal overflow, keyboard navigation, focus restoration, rune awakening, pack reveal, trial completion, saved settings, and browser errors. Screenshots are saved in the ignored `test-results/` directory.
+
+Reference study: all four images in `refs/cambria/`. The brief's X video was unavailable during implementation.
