@@ -17,3 +17,35 @@ Shared brief: [`BRIEF.md`](BRIEF.md). Cambria visual refs: [`refs/cambria/`](ref
 - Feels like a **console game** main menu in the browser (Cambria.gg direction + Clan World parchment/runes).
 - Avoid “divs with basic styling.” Textured, ornamented buttons. Custom cursors. Immersive chrome.
 - Mobile + desktop.
+
+## This branch (`prototype/grok-4-6`)
+
+Vite + React hub. Generated parchment, ornamented plaques, camp scene, icons, and pixel cursors live in `public/art/` and `public/cursors/`.
+
+### Run
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the URL Vite prints (default `http://localhost:5173`).
+
+```bash
+npm run build
+npm run preview
+```
+
+`pnpm` / `yarn` work too if you prefer.
+
+### Controls
+
+- Mouse / touch to highlight and confirm
+- `↑` `↓` or `W` `S` to move the selection
+- `Enter` / `Space` to confirm
+- `1`–`6` jump to a slot
+- Speaker button mutes menu ticks
+
+No wallet, no token chrome, no account modal.
+
+Console-feel notes: [`NOTES.md`](NOTES.md).
