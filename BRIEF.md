@@ -48,3 +48,7 @@ Buttons can be non-functional stubs / routes that show a placeholder panel — t
 - Buttons feel like **cards**, not web links — weight, icon, caption.
 - High-contrast accents (gold / red) on charcoal; immersive, not corporate.
 - Clan World twist you must invent: parchment/runes ancient-paper background, whisper text that writes then fades, Clan World menu labels below — do **not** copy Cambria’s crypto/token chrome.
+
+## Art rule (hard)
+
+Invent every visual asset. Use each CLI’s **image generation** tools (Codex image gen; Grok Imagine / video where available). No stock photos, no Unsplash, no generic texture packs. Backgrounds, button plates, icons, cursors, grids, animation frames — generate them. Prefer handcrafted Clan World parchment / runes / metal / stone over flat CSS-only chrome when possible.
