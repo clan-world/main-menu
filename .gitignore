@@ -1,0 +1,5 @@
+node_modules/
+dist/
+artifacts/fable-reference.png
+test-results/
+playwright-report/
